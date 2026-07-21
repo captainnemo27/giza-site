@@ -30,10 +30,10 @@ const services = [
 ];
 
 const projects = [
-  { client: "BETALL", tag: "REALTIME DATA PLATFORM", title: "A resilient real-time data foundation for e-commerce operations." },
-  { client: "PIKTOCHART", tag: "BUSINESS INTELLIGENCE", title: "Faster analytics and clearer decisions for a global product team." },
-  { client: "DIADU", tag: "GIS DATA PROCESSING", title: "Digital workflows for complex water supply infrastructure." },
-  { client: "YHOJAPAN", tag: "OPERATIONS SOFTWARE", title: "One inventory and sales system across Japan and Vietnam." },
+  { client: "BETALL", tag: "REALTIME DATA PLATFORM", title: "A resilient real-time data foundation for e-commerce operations.", image: "/projects/betall.png", alt: "Enterprise data warehouse connecting CRM, SaaS applications and BI tools" },
+  { client: "PIKTOCHART", tag: "BUSINESS INTELLIGENCE", title: "Faster analytics and clearer decisions for a global product team.", image: "/projects/piktochart.jpg", alt: "Data warehouse powering AI, analytics and intelligent business operations" },
+  { client: "DIADU", tag: "GIS DATA PROCESSING", title: "Digital workflows for complex water supply infrastructure.", image: "/projects/diadu.png", alt: "Water and wastewater GIS operations dashboard" },
+  { client: "YHOJAPAN", tag: "OPERATIONS SOFTWARE", title: "One inventory and sales system across Japan and Vietnam.", image: "/projects/yhojapan.png", alt: "Custom web application development workspace" },
 ];
 
 const testimonials = [
@@ -64,11 +64,13 @@ const faqs = [
 ];
 
 export default function Home() {
+  const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Giza Digital home">
-          <img className="brand-logo" src="/giza-logo.png" alt="Giza Digital" />
+          <img className="brand-logo" src={asset("giza-logo.png")} alt="Giza Digital" />
         </a>
         <nav aria-label="Primary navigation">
           <a href="#services">Services</a>
@@ -135,7 +137,11 @@ export default function Home() {
         <div className="project-grid">
           {projects.map((project, index) => (
             <article className={`project-card project-${index + 1}`} key={project.client}>
-              <div className="project-art" aria-hidden="true"><span>{String(index + 1).padStart(2, "0")}</span><i /><i /><i /></div>
+              <div className="project-art">
+                <img src={asset(project.image.replace(/^\//, ""))} alt={project.alt} loading="lazy" />
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div className="project-overlay"><b>{project.client}</b><small>View case study ↗</small></div>
+              </div>
               <div className="project-meta"><span>{project.tag}</span><b>{project.client}</b></div>
               <h3>{project.title}</h3>
             </article>
@@ -175,7 +181,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-main">
-          <div><a className="brand footer-brand" href="#top"><img className="footer-logo" src="/giza-logo.png" alt="Giza Digital" /></a><p>Data–AI systems built from deep understanding.</p></div>
+          <div><a className="brand footer-brand" href="#top"><img className="footer-logo" src={asset("giza-logo.png")} alt="Giza Digital" /></a><p>Data–AI systems built from deep understanding.</p></div>
           <div><span>Navigate</span><a href="#services">Services</a><a href="#work">Selected work</a><a href="#about">About us</a><a href="#faq">FAQ</a></div>
           <div><span>Contact</span><a href="mailto:hello@gizadigital.vn">hello@gizadigital.vn</a><a href="https://gizadigital.vn">gizadigital.vn</a><p>Ho Chi Minh City, Vietnam</p></div>
           <div><span>Legal</span><a href="#">Privacy policy</a><a href="#">Terms of service</a></div>
