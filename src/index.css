@@ -1,6 +1,6 @@
-@import "tailwindcss";
-
 :root {
+  --font-display: "Syne", sans-serif;
+  --font-body: "Manrope", sans-serif;
   --ink: #0b0d0c;
   --panel: #111411;
   --panel-2: #171b17;
