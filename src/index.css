@@ -80,6 +80,10 @@ nav a:hover, footer a:hover { color: var(--lime); }
 .kicker { margin: 25px 0 20px; color: #63705e; font-weight: 700; }
 .manifesto h2 { max-width: 720px; font-size: clamp(42px, 4.8vw, 72px); line-height: 1.03; letter-spacing: -.045em; }
 .about-story { align-self: end; padding-top: 48px; border-top: 1px solid #c8cbc3; }
+.about-tabs { grid-column: 2; display: flex; align-self: end; gap: 8px; padding-bottom: 18px; border-bottom: 1px solid #c8cbc3; }
+.about-tabs a { padding: 12px 17px; border: 1px solid #b9bdb4; color: #596158; font-size: 12px; font-weight: 800; }
+.about-tabs a:hover, .about-tabs a.active { border-color: var(--ink); background: var(--ink); color: var(--lime); }
+.about-tabs + .about-story { grid-column: 2; }
 .about-story p, .about-block p, .strategy-grid p { color: #454c44; font-size: 16px; line-height: 1.8; }
 .about-story p + p, .about-block p + p { margin-top: 20px; }
 .about-story strong, .about-block strong { color: var(--ink); }
@@ -135,7 +139,7 @@ footer { padding: 6vw 4vw 25px; background: #080a09; }.footer-main { display: gr
   .nav-dropdown { position: static; }
   .nav-dropdown-menu { position: fixed; top: 106px; right: 20px; left: 20px; width: auto; transform: translateY(8px); }
   .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { transform: none; }
-  .hero { grid-template-columns: 1fr; }.hero-visual { min-height: 520px; }.manifesto { grid-template-columns: 1fr; }.about-block, .about-strategy-heading { grid-template-columns: 1fr; }.about-story, .about-block, .about-strategy { grid-column: 1; }.strategy-grid { grid-template-columns: 1fr; }.strategy-grid article { min-height: auto; }.strategy-grid span { margin-bottom: 28px; }.section-heading { grid-template-columns: 1fr; }.service-row { grid-template-columns: .2fr 1fr; }.service-row p { grid-column: 2; }.service-row i { display:none; }
+  .hero { grid-template-columns: 1fr; }.hero-visual { min-height: 520px; }.manifesto { grid-template-columns: 1fr; }.about-block, .about-strategy-heading { grid-template-columns: 1fr; }.about-tabs, .about-tabs + .about-story, .about-story, .about-block, .about-strategy { grid-column: 1; }.strategy-grid { grid-template-columns: 1fr; }.strategy-grid article { min-height: auto; }.strategy-grid span { margin-bottom: 28px; }.section-heading { grid-template-columns: 1fr; }.service-row { grid-template-columns: .2fr 1fr; }.service-row p { grid-column: 2; }.service-row i { display:none; }
   .testimonials, .faq { grid-template-columns: 1fr; }.quote-heading { position: static; }.footer-main { grid-template-columns: 2fr 1fr 1fr; }.footer-main > div:last-child { display:none; }
 }
 
@@ -145,6 +149,7 @@ footer { padding: 6vw 4vw 25px; background: #080a09; }.footer-main { display: gr
   .nav-dropdown-menu { top: 101px; }
   .hero, .manifesto, .services, .work, .testimonials, .faq, .final-cta { padding-left: 20px; padding-right: 20px; }.hero { padding-top: 70px; }.hero h1 { font-size: clamp(49px, 15vw, 72px); }.hero-actions { align-items: flex-start; flex-direction: column; }.trust-strip { gap: 16px; }.hero-visual { min-height: 430px; }.orbit-two { width: 340px; height:340px; }.orbit-one { width: 220px; height:220px; }.signal { display:none; }
   .manifesto { padding-top: 100px; padding-bottom: 100px; }.manifesto h2 { font-size: 44px; }.manifesto-copy { margin-top: 28px; }
+  .about-tabs { overflow-x: auto; padding-top: 12px; }.about-tabs a { white-space: nowrap; }
   .section-heading h2, .quote-heading h2, .faq h2 { font-size: 50px; }.service-row { padding: 25px 0; gap: 12px; }.service-row h3 { font-size: 25px; }.project-grid { grid-template-columns: 1fr; gap: 55px; }.project-card:nth-child(even) { transform:none; }.project-art > span { font-size: 56px; }
   figure { padding: 25px; }summary { font-size: 17px; grid-template-columns: 32px 1fr auto; }details > p { padding-left: 47px; }.final-cta { padding-top: 100px; padding-bottom: 100px; }.final-cta h2 { font-size: 62px; }
   .footer-main { grid-template-columns: 1fr 1fr; }.footer-main > div:first-child { grid-column: 1 / -1; }.footer-bottom { flex-direction: column; gap: 12px; }
