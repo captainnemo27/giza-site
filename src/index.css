@@ -75,11 +75,22 @@ nav a:hover, footer a:hover { color: var(--lime); }
 .reveal { opacity: 0; animation: rise .75s var(--ease) forwards; }.reveal-1 { animation-delay: .08s; }.reveal-2 { animation-delay: .18s; }.reveal-3 { animation-delay: .32s; }.reveal-4 { animation-delay: .46s; }
 @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 
-.manifesto { display: grid; grid-template-columns: 1fr 3fr; gap: 5vw; padding: 12vw 4vw; background: var(--ivory); color: var(--ink); }
+.manifesto { display: grid; grid-template-columns: .85fr 1.15fr; gap: 5vw 8vw; padding: 10vw 4vw; background: var(--ivory); color: var(--ink); }
 .manifesto .section-index { color: #65715f; }
-.kicker { margin-bottom: 24px; color: #63705e; font-weight: 700; }
-.manifesto h2 { max-width: 1100px; font-size: clamp(42px, 5.4vw, 82px); line-height: 1.03; letter-spacing: -.045em; }
-.manifesto-copy { max-width: 690px; margin: 44px 0 0 auto; color: #454c44; font-size: 18px; line-height: 1.8; }
+.kicker { margin: 25px 0 20px; color: #63705e; font-weight: 700; }
+.manifesto h2 { max-width: 720px; font-size: clamp(42px, 4.8vw, 72px); line-height: 1.03; letter-spacing: -.045em; }
+.about-story { align-self: end; padding-top: 48px; border-top: 1px solid #c8cbc3; }
+.about-story p, .about-block p, .strategy-grid p { color: #454c44; font-size: 16px; line-height: 1.8; }
+.about-story p + p, .about-block p + p { margin-top: 20px; }
+.about-story strong, .about-block strong { color: var(--ink); }
+.about-block { grid-column: 1 / -1; display: grid; grid-template-columns: .85fr 1.15fr; gap: 8vw; margin-top: 5vw; padding-top: 5vw; border-top: 1px solid #c8cbc3; }
+.about-block h3, .about-strategy h3 { margin-bottom: 25px; font-size: clamp(30px, 3.2vw, 50px); line-height: 1.08; letter-spacing: -.035em; }
+.about-strategy { grid-column: 1 / -1; margin-top: 4vw; padding-top: 5vw; border-top: 1px solid #c8cbc3; }
+.about-strategy-heading { display: grid; grid-template-columns: .85fr 1.15fr; gap: 8vw; }
+.strategy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 50px; background: #c8cbc3; border: 1px solid #c8cbc3; }
+.strategy-grid article { min-height: 360px; padding: 32px; background: var(--ivory); }
+.strategy-grid span { display: block; margin-bottom: 60px; color: #65715f; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.strategy-grid h4 { min-height: 64px; margin: 0 0 22px; font: 650 24px/1.15 var(--font-display); letter-spacing: -.025em; }
 
 .services, .work, .testimonials, .faq { padding: 10vw 4vw; }
 .section-heading { display: grid; grid-template-columns: 1.6fr .7fr; gap: 6vw; align-items: end; margin-bottom: 70px; }
@@ -124,7 +135,7 @@ footer { padding: 6vw 4vw 25px; background: #080a09; }.footer-main { display: gr
   .nav-dropdown { position: static; }
   .nav-dropdown-menu { position: fixed; top: 106px; right: 20px; left: 20px; width: auto; transform: translateY(8px); }
   .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { transform: none; }
-  .hero { grid-template-columns: 1fr; }.hero-visual { min-height: 520px; }.manifesto { grid-template-columns: 1fr; }.section-heading { grid-template-columns: 1fr; }.service-row { grid-template-columns: .2fr 1fr; }.service-row p { grid-column: 2; }.service-row i { display:none; }
+  .hero { grid-template-columns: 1fr; }.hero-visual { min-height: 520px; }.manifesto { grid-template-columns: 1fr; }.about-block, .about-strategy-heading { grid-template-columns: 1fr; }.about-story, .about-block, .about-strategy { grid-column: 1; }.strategy-grid { grid-template-columns: 1fr; }.strategy-grid article { min-height: auto; }.strategy-grid span { margin-bottom: 28px; }.section-heading { grid-template-columns: 1fr; }.service-row { grid-template-columns: .2fr 1fr; }.service-row p { grid-column: 2; }.service-row i { display:none; }
   .testimonials, .faq { grid-template-columns: 1fr; }.quote-heading { position: static; }.footer-main { grid-template-columns: 2fr 1fr 1fr; }.footer-main > div:last-child { display:none; }
 }
 

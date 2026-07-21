@@ -122,11 +122,37 @@ export default function Home() {
       </section>
 
       <section className="manifesto" id="about">
-        <p className="section-index">01 / PRINCIPLE</p>
-        <div>
+        <div className="about-intro">
+          <p className="section-index">01 / ABOUT US</p>
           <p className="kicker">Driven by Understanding</p>
-          <h2>We don’t build blindly. We begin with the business beneath the brief.</h2>
-          <p className="manifesto-copy">True technology solutions come from understanding your core pain points, people and vision. Every system we deliver is engineered from that shared foundation of insight.</p>
+          <h2>We build technology from a deep understanding of the business behind it.</h2>
+        </div>
+
+        <div className="about-story">
+          <p><strong>Giza Digital Services Ltd.</strong> is a technology solutions provider established in 2022 in Ho Chi Minh City, Vietnam. Founded with a deep technical focus on Data Application and Processing, we began our journey by building robust Data Platforms for small and medium-sized enterprises (SMEs).</p>
+          <p>Over the years, Giza has steadily expanded its capabilities into a comprehensive suite of IT services. Today, our expertise spans engineering Customer Data Platforms (CDP), Web App development, advanced Business Intelligence (BI) solutions, bespoke internal operations software, and professional IT consulting.</p>
+          <p>Driving the future of digital transformation, we actively develop and deploy AI Agents tailored to help enterprise clients automate, scale, and thrive in a data-driven world.</p>
+        </div>
+
+        <div className="about-block about-mission">
+          <p className="section-index">OUR MISSION</p>
+          <div>
+            <h3>Turning digital ambition into measurable reality.</h3>
+            <p>To help SMEs clearly identify and master the essential building blocks of their digital transformation journey, while walking hand-in-hand with them to turn that vision into reality. At the absolute core of this mission is a data-driven approach—ensuring that every step we take together is guided by precision, clarity, and actionable insights.</p>
+            <p>At Giza, this philosophy is what we define as <strong>“Driven by Understanding.”</strong> We never build blindly—every single solution we deliver is uniquely tailored and provided based on that deep, shared understanding.</p>
+          </div>
+        </div>
+
+        <div className="about-strategy">
+          <div className="about-strategy-heading">
+            <p className="section-index">OUR STRATEGY</p>
+            <h3>Three principles guide how we build.</h3>
+          </div>
+          <div className="strategy-grid">
+            <article><span>01</span><h4>Data-Centric Approach</h4><p>Data is the lifeblood of modern business. We design every solution with a deep focus on data integrity, integration, and advanced analytics, transforming raw information into a high-value strategic asset.</p></article>
+            <article><span>02</span><h4>Platform Services as the Bedrock</h4><p>A strong house needs a solid foundation. We build highly scalable, reliable, and secure platform services that provide the perfect infrastructure for all business applications to run seamlessly.</p></article>
+            <article><span>03</span><h4>AI-Integrated Applications</h4><p>We deliver applications that position Artificial Intelligence as a vital and inseparable building block of digital transformation, delivering real business value and driving future-ready operations.</p></article>
+          </div>
         </div>
       </section>
 
