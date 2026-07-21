@@ -9,21 +9,25 @@
 const services = [
   {
     number: "01",
+    slug: "enterprise-data-warehouse",
     title: "Enterprise Data Warehouse",
     copy: "A reliable data foundation that unifies fragmented sources and makes trusted information available across your business.",
   },
   {
     number: "02",
+    slug: "data-ai-agents",
     title: "Data–AI Agents",
     copy: "Purpose-built AI agents that understand your workflows, automate repetitive work and keep people in control.",
   },
   {
     number: "03",
+    slug: "business-intelligence",
     title: "Advanced Business Intelligence",
     copy: "Decision-ready dashboards and analytics that turn complex data into clear, timely action.",
   },
   {
     number: "04",
+    slug: "web-applications",
     title: "Web Applications",
     copy: "Focused internal tools and customer-facing products engineered around the way your teams actually work.",
   },
@@ -73,9 +77,20 @@ export default function Home() {
           <img className="brand-logo" src={asset("giza-logo.png")} alt="Giza Digital" />
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#services">Services</a>
+          <div className="nav-dropdown">
+            <a className="nav-dropdown-trigger" href="#services" aria-haspopup="true">Services <span>⌄</span></a>
+            <div className="nav-dropdown-menu" aria-label="Services">
+              {services.map((service) => (
+                <a href={`#${service.slug}`} key={service.slug}>
+                  <small>{service.number}</small>
+                  <span>{service.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
           <a href="#work">Work</a>
-          <a href="#about">About</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact Us</a>
         </nav>
         <a className="header-cta" href="mailto:hello@gizadigital.vn">Talk to us <span>↗</span></a>
       </header>
@@ -122,7 +137,7 @@ export default function Home() {
         </div>
         <div className="service-list">
           {services.map((service) => (
-            <article className="service-row" key={service.number}>
+            <article className="service-row" id={service.slug} key={service.number}>
               <span>{service.number}</span><h3>{service.title}</h3><p>{service.copy}</p><i>↗</i>
             </article>
           ))}
@@ -173,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="final-cta">
+      <section className="final-cta" id="contact">
         <p>YOUR NEXT SYSTEM STARTS WITH A CONVERSATION.</p>
         <h2>Let’s turn understanding<br />into <em>momentum.</em></h2>
         <a className="button button-dark" href="mailto:hello@gizadigital.vn?subject=Let%27s%20build%20with%20Giza">Start a project <span>↗</span></a>
@@ -182,7 +197,7 @@ export default function Home() {
       <footer>
         <div className="footer-main">
           <div><a className="brand footer-brand" href="#top"><img className="footer-logo" src={asset("giza-logo.png")} alt="Giza Digital" /></a><p>Data–AI systems built from deep understanding.</p></div>
-          <div><span>Navigate</span><a href="#services">Services</a><a href="#work">Selected work</a><a href="#about">About us</a><a href="#faq">FAQ</a></div>
+          <div><span>Navigate</span><a href="#services">Services</a><a href="#work">Selected work</a><a href="#about">About Us</a><a href="#contact">Contact Us</a><a href="#faq">FAQ</a></div>
           <div><span>Contact</span><a href="mailto:hello@gizadigital.vn">hello@gizadigital.vn</a><a href="https://gizadigital.vn">gizadigital.vn</a><p>Ho Chi Minh City, Vietnam</p></div>
           <div><span>Legal</span><a href="#">Privacy policy</a><a href="#">Terms of service</a></div>
         </div>
