@@ -68,8 +68,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Giza Digital home">
-          <span className="brand-mark">G</span>
-          <span>GIZA DIGITAL</span>
+          <img className="brand-logo" src="/giza-logo.png" alt="Giza Digital" />
         </a>
         <nav aria-label="Primary navigation">
           <a href="#services">Services</a>
@@ -176,7 +175,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-main">
-          <div><a className="brand footer-brand" href="#top"><span className="brand-mark">G</span><span>GIZA DIGITAL</span></a><p>Data–AI systems built from deep understanding.</p></div>
+          <div><a className="brand footer-brand" href="#top"><img className="footer-logo" src="/giza-logo.png" alt="Giza Digital" /></a><p>Data–AI systems built from deep understanding.</p></div>
           <div><span>Navigate</span><a href="#services">Services</a><a href="#work">Selected work</a><a href="#about">About us</a><a href="#faq">FAQ</a></div>
           <div><span>Contact</span><a href="mailto:hello@gizadigital.vn">hello@gizadigital.vn</a><a href="https://gizadigital.vn">gizadigital.vn</a><p>Ho Chi Minh City, Vietnam</p></div>
           <div><span>Legal</span><a href="#">Privacy policy</a><a href="#">Terms of service</a></div>
