@@ -103,7 +103,7 @@ nav a:hover, footer a:hover { color: var(--lime); }
 .service-list { border-top: 1px solid var(--line); }
 .service-row { display: grid; grid-template-columns: .35fr 1.2fr 1.1fr .2fr; gap: 30px; align-items: center; padding: 34px 8px; border-bottom: 1px solid var(--line); transition: padding .25s var(--ease), background .25s ease; }
 .service-row:hover { padding-left: 22px; background: rgba(184,255,61,.04); }
-.service-row > span { color: var(--lime); font-size: 11px; }.service-row h3 { font-size: clamp(23px, 2.3vw, 38px); }.service-row p { color: var(--muted); line-height: 1.65; }.service-row i { color: var(--lime); font-size: 24px; font-style: normal; }
+.service-row > span { color: var(--lime); font: 700 clamp(18px, 1.5vw, 22px)/1 var(--font-display); letter-spacing: .04em; }.service-row h3 { font-size: clamp(23px, 2.3vw, 38px); }.service-row p { color: var(--muted); line-height: 1.65; }.service-row i { color: var(--lime); font-size: 24px; font-style: normal; }
 
 .work { background: var(--ivory); color: var(--ink); }.work .section-index { color: #5c6a56; }.work-heading > p { color: #515950; }
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw 2vw; }
