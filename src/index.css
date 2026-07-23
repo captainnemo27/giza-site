@@ -13,7 +13,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: var(--ink); }
+html { scroll-behavior: smooth; background: var(--ink); scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 body { margin: 0; background: var(--ink); color: var(--ivory); font-family: var(--font-body), sans-serif; font-size: 16px; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, p { margin: 0; }
